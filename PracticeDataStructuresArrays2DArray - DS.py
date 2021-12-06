@@ -31,9 +31,15 @@ def glasshours(arr):
             howmanyheads = int(lengthofi/3) + 2 #length of row divide by head size + 2
             headsNtailes = list(itertools.repeat(i, howmanyheads)) #repeat the same item the number of heads we need
             counter = -1
+            #heads
             for j in headsNtailes:
                 print(j[counter+1:counter+4])
                 counter += 1
+            #bodys
+            for index2, k in enumerate (headsNtailes):
+                if index != 0 or -1 and index2 != 0 or -1:
+                    print (k)
+
                      
 
 glasshours(list2d)
