@@ -5,11 +5,15 @@ if __name__ == '__main__':
     z = int(input())
     n = int(input())
     
-   
-    permutations = itertools.permutations([list(range(0,x+1)), list(range(0,y+1)), list(range(0,z+1))], 3)
-    
-    permutations = list(permutations)
-    print(permutations)
+    list_x = list(range( 0 , x+1))
+    list_y = list(range( 0 , y+1))
+    list_z = list(range( 0 , z+1))
+    # print(list_x)
+    # print(list_y)
+    # print(list_z)
 
-    thelist = [i for i in permutations if sum(i)!=n]
-    print(thelist)
+    product = itertools.product(list_x,list_y, list_z)
+    product = list(product)
+
+    result = [list(x) for x in product if sum(x)!=n]
+    print(result)
